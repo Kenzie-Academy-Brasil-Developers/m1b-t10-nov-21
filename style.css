@@ -1,0 +1,57 @@
+/*
+tag {
+  propriedade:valor;
+}
+
+#id {
+  propriedade: valor;
+}
+
+.class {
+  propriedade: valor;
+}
+
+
+*/
+
+header {
+  background-color: #ff5f8f;
+  height: 91px;
+}
+
+h1 {
+  font-family: Roboto;
+  font-size: 36px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 42px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #ffffff;
+}
+
+nav {
+  height: 50px;
+  background-color: #525252;
+}
+
+.menu-topo-link {
+  font-family: Roboto;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 19px;
+  letter-spacing: 0em;
+  text-align: left;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.menu-pesquisa {
+  width: 274px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #a2a2a2;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
