@@ -55,3 +55,94 @@ nav {
   box-sizing: border-box;
   border-radius: 5px;
 }
+
+button {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+
+  /* color: #ffffff; */
+
+  background-color: transparent;
+  color: blue;
+  border: 0px;
+  text-transform: uppercase;
+}
+
+.main-pargraph-report {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 30px;
+  /* or 167% */
+
+  color: #000000;
+}
+
+footer {
+  height: 270px;
+  background: #414141;
+}
+
+h2 {
+  font-family: Roboto;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 56px;
+  letter-spacing: 0em;
+  text-align: left;
+}
+
+.main-section-mini-report > a {
+  text-decoration: none;
+  color: #000000;
+}
+
+.main-section-mini-report > a > h4 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 30px;
+}
+
+.main-section-mini-report > a > span {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.main-section-mini-report > a > p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 22px;
+}
+
+footer > nav > ul > li > a {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 21px;
+  text-decoration: none;
+
+  color: #ffffff;
+}
+
+footer h5 {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 16px;
+
+  color: #ffffff;
+}
