@@ -26,13 +26,16 @@ h1 {
   font-weight: 700;
   line-height: 42px;
   letter-spacing: 0em;
-  text-align: left;
   color: #ffffff;
+
+  text-align: center;
+  padding-top: 25px;
 }
 
 nav {
   height: 50px;
   background-color: #525252;
+  padding: 0 50px;
 }
 
 .menu-topo-link {
@@ -63,10 +66,9 @@ button {
   font-size: 14px;
   line-height: 16px;
 
-  /* color: #ffffff; */
+  color: #ffffff;
 
   background-color: transparent;
-  color: blue;
   border: 0px;
   text-transform: uppercase;
 }
@@ -145,4 +147,20 @@ footer h5 {
   line-height: 16px;
 
   color: #ffffff;
+}
+
+.menu-topo-item {
+  float: left;
+  margin-top: 15px;
+  margin-left: 50px;
+  margin-right: 70px;
+}
+
+.menu-topo {
+  /* display: flex; ERROR */
+}
+
+.header-menu-pesquisar {
+  float: right;
+  margin-top: 10px;
 }
