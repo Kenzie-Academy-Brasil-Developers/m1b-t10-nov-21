@@ -208,3 +208,80 @@ footer h5 {
   float: right;
   margin-top: 10px;
 }
+
+/*********************************/
+
+/******** pseudo-classe *******
+palavra-chave adiciona ao seletor um estado especial.
+
+:hover
+:active
+:disabled
+:last-child
+:first-child
+:nth-child(n)
+
+*/
+.menu-topo-link:hover {
+  background-color: #ff5f8f;
+}
+
+/*Aplicando uma cor de fundo ao último elemento com a classe selecionada (main-section-mini-report)*/
+/* .main-section-mini-report:last-child {
+  background-color: #ff5f8f;
+} */
+
+/*Aplicando uma cor de fundo no elemento com a classe selecionada (main-section-mini-report) 
+    na posição 1 específico */
+/* .main-section-mini-report:nth-child(1) {
+      background-color: #ff5f8f;
+    } */
+
+/*Aplicando uma cor de fundo no elemento com a classe selecionada (main-section-mini-report) 
+    em posições específicas (1 e 3) */
+/* .main-section-mini-report:nth-child(1),
+  .main-section-mini-report:nth-child(3) {
+    background-color: #ff5f8f;
+  } */
+
+/******* pseudo-elemento /*******
+::before
+::after
+*/
+
+/*Adicionando depois da tag <a> (ancora) o texto "*"   */
+/* a::after {
+    content: "*";
+  } */
+
+/*Adicionando antes da tag <a> (ancora) o texto "<--"   */
+/* a::before {
+  content: "<--";
+} */
+
+/* Aplicando a primeira linha de todas tags <p> (paragrafo) uma cor e transformando em letra maiúscula */
+/* p::first-line {
+    color: chartreuse;
+    text-transform: uppercase; 
+  } */
+
+/*Selecionando e alterando a configuração da primeira letra da tag <p> (paragrafo)*/
+/* p::first-letter {
+  color: blue;
+  font-size: 35px;
+  text-transform: lowercase;
+} */
+
+/******* Aplicando efeitos com pseudo-classe e pseudo-elementos na mesma seleção *******/
+
+/*Usando a pseudo-classe :hover (mouse em cima do elemento) 
+  e o pseudo-elemento ::before para adicionar o texto "<--" antes da tag <a>   */
+/* a:hover::before {
+    content: "<--";
+  } */
+
+/*Usando a pseudo-classe :hover (mouse em cima do elemento) 
+  e o pseudo-elemento ::after para adicionar o texto "*" depois da tag <a>   */
+/* a:hover::after {
+    content: "*";
+  } */
