@@ -1,0 +1,17 @@
+.testando-vh-vw {
+  /*width: 500px;*/
+  /*height: 500px;*/
+  width: 150vw;
+  height: 10vh;
+
+  background-color: #de0b77;
+}
+
+/* viewport - tela de renderização (área visível)
+
+VH viewport + height(altura)
+VW Viewport + width(largura)
+
+ VW - Se a largura for de 750px, 1vw equivalte a 7.5px
+
+*/

@@ -239,10 +239,10 @@ palavra-chave adiciona ao seletor um estado especial.
 
 /*Aplicando uma cor de fundo no elemento com a classe selecionada (main-section-mini-report) 
     em posições específicas (1 e 3) */
-/* .main-section-mini-report:nth-child(1),
-  .main-section-mini-report:nth-child(3) {
-    background-color: #ff5f8f;
-  } */
+/*.main-section-mini-report:nth-child(1),
+.main-section-mini-report:nth-child(3) {
+  background-color: #ff5f8f;
+}*/
 
 /******* pseudo-elemento /*******
 ::before
@@ -285,3 +285,40 @@ palavra-chave adiciona ao seletor um estado especial.
 /* a:hover::after {
     content: "*";
   } */
+
+/********** MEDIA QUERY  *************/
+
+/* @media only screen and (max-width: 1000px) {
+  body {
+    background-color: blue;
+  }
+} */
+
+/************ UNIDADE DE MEDIDA NO CSS ********************/
+
+/*.px  - unidade de medida fixa*/
+
+/* .rem e .em - unidades de medida relativa (se refere a alguém) */
+
+/* .rem - 1rem = 16px do root (font padrão do browser, default 16px) */
+
+/* html {
+  font-size: 2px;
+} */
+
+/*2rem * 16px == 32px */
+.main-section-mini-report > a > span {
+  font-size: 0.75rem;
+  /* font-size: 0.75%; */
+}
+
+article {
+  font-size: 1px;
+}
+
+/*3rem * 16px = 48px */
+.main-pargraph-report {
+  font-size: 1em;
+}
+
+/* .em -  1em = 16px do elemento pai */
