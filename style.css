@@ -309,7 +309,7 @@ palavra-chave adiciona ao seletor um estado especial.
 /*2rem * 16px == 32px */
 .main-section-mini-report > a > span {
   font-size: 0.75rem;
-  /* font-size: 0.75%; */
+  /* font-size: 12px; */
 }
 
 article {
