@@ -1,0 +1,50 @@
+#
+1,let varResultado = 0;,0,
+2,let varIncrementavel;,0,
+3,varIncrementavel = 0;,0,0
+4,"varIncrementavel < 3; 
+
+(0<3)",0,0
+5,"varResultado = varResultado + varIncrementavel + 1; 
+
+(varResultado = 0 + 0 + 1)",1,0
+6," varIncrementavel++
+
+(varIncrementavel = 0 + 1 )",1,1
+7,"varIncrementavel < 3;
+(1 < 3 )","1 ",1
+8,"varResultado = varResultado + varIncrementavel + 1; 
+
+(varResultado = 1 + 1 + 1)",3,1
+9,"varIncrementavel++
+
+(varIncrementavel = varIncrementavel + 1)
+
+(varIncrementavel = 1 + 1)",3,2
+10,"varIncrementavel < 3;
+(2<3)",3,2
+11," varResultado = varResultado + varIncrementavel + 1;
+
+( varResultado = 3 + 2 + 1;)",6,2
+12,"varIncrementavel++
+
+(varIncrementavel = varIncrementavel + 1)
+
+(varIncrementavel = 2 + 1)",6,3
+13," varIncrementavel < 3;
+
+(3<3)",--,--
+14,"console.log(""varIncrementavel: "" + varIncrementavel);
+
+console.log(""varIncrementavel: "" + 3);",6,3
+15,"console.log(""varResultado: "" + varResultado);
+
+console.log(""varResultado: "" + 6);",6,3
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
+,,,
