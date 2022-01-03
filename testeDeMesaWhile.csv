@@ -1,0 +1,8 @@
+#
+1,let numero = 0;,0," "
+2,numero<5,0,sim
+3,console.log,0," "
+5,numero<5,0,sim
+6,console.log,0,
+7,numero<5,0,sim
+8,console.log,0,

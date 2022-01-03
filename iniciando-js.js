@@ -229,12 +229,27 @@ varTextoInicial = 5;
 let varResultado = 0;
 let varIncrementavel;
 
-for (varIncrementavel = 0; 
-  varIncrementavel < 3; 
-  varIncrementavel++) 
-  {
-    varResultado = varResultado + varIncrementavel + 1;
+for (varIncrementavel = 0; varIncrementavel < 3; varIncrementavel++) {
+  varResultado = varResultado + varIncrementavel + 1;
 }
 
-console.log("varIncrementavel: " + varIncrementavel);
-console.log("varResultado: " + varResultado);
+/*console.log("varIncrementavel: " + varIncrementavel);
+console.log("varResultado: " + varResultado);*/
+
+//Sintaxe
+
+/*for (let i = 0; i < 5; i++) {
+  //semântica
+  console.log("no FOR variável i está valendo: " + i);
+
+  if (i === 3) {
+    //console.log("A variável i é igual a 3");
+  }
+}*/
+// console.log("fora do for o i vale: " + i);
+let numero = 0;
+/*while (numero < 5) {
+ // console.log("valor da variável numero é: " + numero);
+  //numero++;
+}*/
+
