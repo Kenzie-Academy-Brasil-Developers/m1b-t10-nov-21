@@ -253,3 +253,61 @@ let numero = 0;
   //numero++;
 }*/
 
+///////////// ARRAYS /////////////////////////
+
+let arrayDePosicao = [
+  "Primeria Posicao",
+  "Segunda Posicao",
+  "Terceira Posicao",
+];
+
+//console.log(arrayDePosicao[3]);
+
+const primeirosValores = [];
+
+/*Erro por que nasceu como const*/
+// primeirosValores = ["valor4","valor5", "valor6"];
+
+/*Pode ser alterado por que nasceu como let*/
+//arrayDePosicao = ["valor4","valor5", "valor6"];
+
+// console.log(primeirosValores);
+
+// console.log(arrayDePosicao);
+
+/*Adicionando na última posição*/
+let totaldePosicoes = arrayDePosicao.push("Quarta posicao");
+
+console.log(arrayDePosicao);
+//console.log(totaldePosicoes);
+
+/*Removendo a última posição do array*/
+// arrayDePosicao.pop();
+//console.log(arrayDePosicao);
+
+/*Remover do ínicio do Array*/
+// arrayDePosicao.shift()
+// console.log(arrayDePosicao);
+
+/*Buscando a posição (indice) de um valor no array*/
+//let pos = arrayDePosicao.indexOf('Terceira Posicao');
+
+//console.log(pos);
+
+// arrayDePosicao.splice(pos, 1);
+
+// console.log(arrayDePosicao);
+
+/*Imprimendo duas posições do Array*/
+//  console.log(arrayDePosicao[0]+" | "+arrayDePosicao[2]);
+
+console.log(arrayDePosicao.length);
+
+for (let i = 0; i < arrayDePosicao.length; i++) {
+  console.log("variavel i: " + i);
+  console.log(arrayDePosicao[i]);
+
+  primeirosValores.push("teste"+i);
+}
+
+console.log(primeirosValores);
