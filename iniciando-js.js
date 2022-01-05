@@ -278,7 +278,7 @@ const primeirosValores = [];
 /*Adicionando na última posição*/
 let totaldePosicoes = arrayDePosicao.push("Quarta posicao");
 
-console.log(arrayDePosicao);
+// console.log(arrayDePosicao);
 //console.log(totaldePosicoes);
 
 /*Removendo a última posição do array*/
@@ -301,13 +301,82 @@ console.log(arrayDePosicao);
 /*Imprimendo duas posições do Array*/
 //  console.log(arrayDePosicao[0]+" | "+arrayDePosicao[2]);
 
-console.log(arrayDePosicao.length);
+// console.log(arrayDePosicao.length);
 
 for (let i = 0; i < arrayDePosicao.length; i++) {
-  console.log("variavel i: " + i);
-  console.log(arrayDePosicao[i]);
-
-  primeirosValores.push("teste"+i);
+  // console.log("variavel i: " + i);
+  // console.log(arrayDePosicao[i]);
+  // primeirosValores.push("teste" + i);
 }
 
-console.log(primeirosValores);
+// console.log(primeirosValores);
+
+///// FUNÇÕES //////////
+
+function nomeDaFuncao(parametro1, parametro2) {
+  //escopo
+  return valorFinalEsperado;
+}
+
+// Crie um altoritmo para ler dois valores e retornar a soma deles;
+// Algoritmo - Lista de passos que precisam ser executados.
+
+// 1 - Criar uma função que recebe por parâmetro dois valores;
+// 2 - Criar variável que recebe a soma desses dois valores;
+// 3 - Retornar a variável com o resultado;
+
+function somaDoisValores(valor1, valor2) {
+  let resultadoSoma = valor1 + valor2;
+
+  console.log(resultadoSoma);
+  return resultadoSoma;
+}
+
+//somaDoisValores(3,4);
+//somaDoisValores(2,4);
+let resultadoSoma;
+function somaTresValores(valor1 = 1, valor2 = 2, valor3 = 3) {
+  resultadoSoma = valor1 + valor2 + valor3;
+
+  // if (valor1 == null) {
+  //   console.log("valor1 NaN");
+  //   valor1=1;
+  // }
+
+  console.log(resultadoSoma);
+  return resultadoSoma;
+}
+
+//somaTresValores();
+
+/* Uma loja precisa calcular o desconto de 15% para cada produto, 
+o Gerente não sabe quantos produtos serão, ele precisa que esse calculo 
+seja rápido e possível de reutilizar*/
+
+/**
+ * 1 - Criar uma função que calcula o desconto de 15%;
+ *  A função deve receber o valor do produto (como parâmetro) para calcular.
+ *  Regra para calcular a porcentagem: valor * 0.15;
+ *
+ * 2 - Criar uma função que recebe o valor sem o desconto executar a função de desconto para saber o valor final final do produto
+ * **/
+
+function calcula15PercentDesconto(valorOriginalProduto) {
+  let valorDesconto = valorOriginalProduto * 0.15;
+
+  // console.log(valorDesconto);
+  return valorDesconto;
+}
+
+function valorFinalProdutoDesconto(valorProduto) {
+  let valorDesconto = calcula15PercentDesconto(valorProduto);
+
+  let resultValorFinalProduto = valorProduto - valorDesconto;
+
+  // console.log("valorDesconto: " + valorDesconto);
+  // console.log("resultValorFinalProduto: " + resultValorFinalProduto);
+
+  return resultValorFinalProduto;
+}
+
+valorFinalProdutoDesconto(100);
