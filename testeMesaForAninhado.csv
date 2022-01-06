@@ -1,0 +1,24 @@
+#
+1,const totalColunasArr = arr[0].length;,5,,,,,
+2,const totalLinhasArr = arr.length;,5,3,,,,
+3,let arrResultProdutos = new Array(totalColunasArr);,5,3,arrResultProdutos[5],,,
+4,colunaArrayResult = 0,5,3,,0,,
+5,arrResultProdutos[colunaArrayResult] = Array(totalLinhasArr);,5,3,arrResultProdutos[5][3],0,,
+6,linhaArrayResult = 0,5,3,,0,0,
+7,arrResultProdutos[colunaArrayResult][linhaArrayResult] =         arr[linhaArrayResult][totalColunasArr - 1 - colunaArrayResult];,5,3,arrResultProdutos[0][0],0,0,
+8," arr[linhaArrayResult]",5,3,arrResultProdutos[0][0],,0," arr[0] === ""'feijão',
+	'arroz',
+	'macarrão',
+	'azeite',
+	'bolacha' """
+9," arrResultProdutos[colunaArrayResult][linhaArrayResult] =
+        arr[linhaArrayResult][totalColunasArr - 1 - colunaArrayResult];",5,3,arrResultProdutos[0][0],0,0,"arr[0][0] = ""bolacha"""
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,
+,,,,,,,

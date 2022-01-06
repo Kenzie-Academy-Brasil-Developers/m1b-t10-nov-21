@@ -379,4 +379,4 @@ function valorFinalProdutoDesconto(valorProduto) {
   return resultValorFinalProduto;
 }
 
-valorFinalProdutoDesconto(100);
+//valorFinalProdutoDesconto(100);
