@@ -48,8 +48,8 @@ function inverterPosicaoColLinTabelaPrecos(arr) {
         arr[linhaArrayResult][totalColunasArr - 1 - colunaArrayResult];
 
       console.log(
-        arr[linhaArrayResult][totalColunasArr - 1 - colunaArrayResult]+
-        " **linhaArrayResult: " +
+        arr[linhaArrayResult][totalColunasArr - 1 - colunaArrayResult] +
+          " **linhaArrayResult: " +
           linhaArrayResult +
           " totalColunasArr: " +
           totalColunasArr +
