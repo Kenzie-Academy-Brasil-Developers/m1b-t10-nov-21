@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usando DOM</title>
+    <style>
+      body {
+        background-color: rgb(14, 14, 218);
+        color: white;
+        font: normal 20px Arial;
+      }
+      .divQuadrado {
+        height: 100px;
+        width: 100px;
+        margin: 10px;
+      }
+      #div1 {
+        background-color: red;
+        color: greenyellow;
+      }
+      #div2 {
+        background-color: yellow;
+        color: rgb(206, 22, 52);
+      }
+      strong{
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Titulo Principal</h1>
+    <p>
+      Primeiro parágrafo - Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipiscing
+      elit. Nunc nec iaculis nulla. Nulla quam libero.
+    </p>
+    <p>
+      Segundo parágrafo - Lorem ipsum dolor sit amet, consectetur adipiscing
+      elit. Nunc nec iaculis nulla. <strong>Nulla quam libero</strong>.
+    </p>
+    <div id="div1" class="divQuadrado">Primeira Div</div>
+    <div id="div2" class="divQuadrado">Segunda Div</div>
+
+    <script>
+      let divTitulo = document.getElementsByTagName("h1")[0];
+      let div1 = document.getElementById("div1");
+      let clQuadrado = document.getElementsByClassName("divQuadrado");
+
+      let divTituloQS = document.querySelector("h1");
+      let Div2QS = document.querySelector("div#div2");
+      
+      let p1 = document.getElementsByTagName("p")[0];
+
+
+      //document.write(divTitulo.innerText);
+      //document.write(div1.innerText);
+      //document.write(divTituloQS.innerText);
+      //document.write(Div2QS.innerText);
+
+      document.write(p1.innerHTML);
+      //window.alert(divTitulo[0].innerText);
+    </script>
+  </body>
+</html>
