@@ -24,7 +24,7 @@
         background-color: yellow;
         color: rgb(206, 22, 52);
       }
-      strong{
+      strong {
         color: orange;
       }
     </style>
@@ -32,8 +32,8 @@
   <body>
     <h1>Titulo Principal</h1>
     <p>
-      Primeiro parágrafo - Lorem ipsum <strong>dolor sit amet</strong>, consectetur adipiscing
-      elit. Nunc nec iaculis nulla. Nulla quam libero.
+      Primeiro parágrafo - Lorem ipsum <strong>dolor sit amet</strong>,
+      consectetur adipiscing elit. Nunc nec iaculis nulla. Nulla quam libero.
     </p>
     <p>
       Segundo parágrafo - Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -41,17 +41,19 @@
     </p>
     <div id="div1" class="divQuadrado">Primeira Div</div>
     <div id="div2" class="divQuadrado">Segunda Div</div>
+    <!-- <div id="div3" class="divQuadrado">Terceira Div</div> -->
 
     <script>
+      let body = document.querySelector("body");
       let divTitulo = document.getElementsByTagName("h1")[0];
       let div1 = document.getElementById("div1");
-      let clQuadrado = document.getElementsByClassName("divQuadrado");
+      //let clQuadrado = document.getElementsByClassName("divQuadrado");
+      let DivQdr2QS = document.querySelector(".divQuadrado");
 
       let divTituloQS = document.querySelector("h1");
       let Div2QS = document.querySelector("div#div2");
-      
-      let p1 = document.getElementsByTagName("p")[0];
 
+      let p1 = document.getElementsByTagName("p")[0];
 
       //document.write(divTitulo.innerText);
       //document.write(div1.innerText);
@@ -60,6 +62,15 @@
 
       document.write(p1.innerHTML);
       //window.alert(divTitulo[0].innerText);
+
+
+      let divTerceira = document.createElement("div");
+      divTerceira.classList.add("divQuadrado");
+      divTerceira.innerText = "Div Terceira";
+
+
+      body.appendChild(divTerceira);
+
     </script>
   </body>
 </html>
