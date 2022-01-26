@@ -24,6 +24,11 @@
 */
 
 const cartItems = document.querySelector(".cart-items");
+let userCartItems = localStorage.getItem("productInCart");
+userCartItems = JSON.parse(userCartItems);
+
+//console.log(userCartItems)
+
 
 function createCardProdInCart(infoProduto) {
   const divCardItem = document.createElement("div");
@@ -72,6 +77,7 @@ function showProductsCart(arrProducts) {
     let divCardItem = createCardProdInCart(arrProducts[i]);
     cartItems.appendChild(divCardItem);
   }
+  return
 }
 
-showProductsCart(infoProducts);
+showProductsCart(userCartItems);

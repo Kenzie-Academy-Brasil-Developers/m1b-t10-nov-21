@@ -1,4 +1,5 @@
 const items2 = document.querySelector(".items2");
+const arrProdInCart = [];
 
 function cardProd(infoProd) {
   const divCard = document.createElement("div");
@@ -18,6 +19,13 @@ function cardProd(infoProd) {
   const tagA = document.createElement("a");
   tagA.href = "#";
   tagA.innerText = "Adicionar ao Carrinho";
+  tagA.addEventListener("click", function () {
+    //console.log(infoProd);
+    arrProdInCart.push(infoProd);
+    console.log(arrProdInCart);
+    localStorage.setItem("productInCart", JSON.stringify(arrProdInCart));
+  });
+
   btnAddCart.appendChild(tagA);
 
   divCard.appendChild(imgProd);
@@ -26,6 +34,7 @@ function cardProd(infoProd) {
   divCard.appendChild(preco);
   divCard.appendChild(btnAddCart);
 
+  //console.log(divCard);
   return divCard;
 }
 
@@ -34,6 +43,7 @@ function addCardProdPage(arrProducts) {
     let divCard = cardProd(arrProducts[i]);
     items2.appendChild(divCard);
   }
+  return;
 }
 
 addCardProdPage(infoProducts);
