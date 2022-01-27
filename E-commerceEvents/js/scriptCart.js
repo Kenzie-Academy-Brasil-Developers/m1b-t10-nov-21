@@ -29,6 +29,33 @@ userCartItems = JSON.parse(userCartItems);
 
 //console.log(userCartItems)
 
+function updateProdInCart(arrProd, id, newQuantity) {
+  for(let i = 0; i < arrProd.length; i++) {
+    if (arrProd[i].idProduto === id) {
+      arrProd[i].quantity = Number(newQuantity)
+    }
+  }
+  return arrProd
+}
+
+function getTotalCart (arrProds) {
+  let total = 0
+  for(let i = 0; i < arrProds.length; i++) {
+    total += arrProds[i].quantity * arrProds[i].price 
+  }
+  return total
+}
+
+function updateTotalPrice(total) {
+  const span = document.getElementById('totalCart')
+  span.innerText = total.toFixed(2)
+}
+
+function removeProdFromCart (arrProd, id, element) {
+  element.remove()
+  return arrProd.filter((product) => product.idProduto !== id)
+}
+
 
 function createCardProdInCart(infoProduto) {
   const divCardItem = document.createElement("div");
@@ -49,14 +76,27 @@ function createCardProdInCart(infoProduto) {
   inputNum.type = "number";
   inputNum.name = "quantity";
   inputNum.id = "no-of-items";
-  inputNum.value = "1";
+  inputNum.value = infoProduto.quantity;
   inputNum.min = "1";
   inputNum.max = "6";
   inputNum.step = "1";
+  inputNum.addEventListener('change', () => {
+    userCartItems = updateProdInCart(userCartItems, infoProduto.idProduto, inputNum.value)
+    localStorage.setItem("productInCart", JSON.stringify(userCartItems))
+    const total = getTotalCart(userCartItems)
+    updateTotalPrice(total)
+  })
 
   const btnRemove = document.createElement("button");
   btnRemove.classList.add("remove");
   btnRemove.id = infoProduto.idProduto;
+
+  btnRemove.addEventListener('click', () => {
+    userCartItems = removeProdFromCart(userCartItems, infoProduto.idProduto, divCardItem)
+    localStorage.setItem("productInCart", JSON.stringify(userCartItems))
+    const total = getTotalCart(userCartItems)
+    updateTotalPrice(total)
+  })
 
   const tagI = document.createElement("i");
   tagI.classList.add("fas", "fa-trash", "fa-2x");
@@ -77,6 +117,9 @@ function showProductsCart(arrProducts) {
     let divCardItem = createCardProdInCart(arrProducts[i]);
     cartItems.appendChild(divCardItem);
   }
+
+  const total = getTotalCart(arrProducts)
+  updateTotalPrice(total)
   return
 }
 

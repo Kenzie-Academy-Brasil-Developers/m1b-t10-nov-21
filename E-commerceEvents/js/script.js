@@ -1,6 +1,24 @@
 const items2 = document.querySelector(".items2");
 const arrProdInCart = [];
 
+function filterArrayByID(arrProd, id) {
+  let result = [];
+  for (let i = 0; i < arrProd.length; i++) {
+    if(arrProd[i].idProduto === id) {
+      result.push(arrProd[i]);
+    }
+  }
+  return result
+}
+
+function incrementProduct(arrProd, id) {
+  for (let i = 0; i < arrProd.length; i++) {
+    if(arrProd[i].idProduto === id) {
+      arrProd[i].quantity += 1;
+    }
+  }
+}
+
 function cardProd(infoProd) {
   const divCard = document.createElement("div");
   divCard.classList.add("card");
@@ -20,8 +38,14 @@ function cardProd(infoProd) {
   tagA.href = "#";
   tagA.innerText = "Adicionar ao Carrinho";
   tagA.addEventListener("click", function () {
-    //console.log(infoProd);
-    arrProdInCart.push(infoProd);
+    let prod = infoProd
+    
+    if(filterArrayByID(arrProdInCart, infoProd.idProduto).length === 0) {
+      prod.quantity = 1;
+      arrProdInCart.push(prod);
+    } else {
+      incrementProduct(arrProdInCart, infoProd.idProduto);
+    }
     console.log(arrProdInCart);
     localStorage.setItem("productInCart", JSON.stringify(arrProdInCart));
   });
